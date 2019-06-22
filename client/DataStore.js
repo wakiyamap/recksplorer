@@ -70,8 +70,8 @@ class DataStore {
     }
 
     fetchPrice() {
-        Axios.get('https://blockchain.info/ticker').then((result) => {
-            this.usdbtc = result.data.USD.last;
+        Axios.get('https://public.bitbank.cc/mona_jpy/ticker').then((result) => {
+            this.usdbtc = result.data.data.last;
         });
     }
 }

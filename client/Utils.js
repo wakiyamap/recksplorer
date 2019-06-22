@@ -5,8 +5,8 @@ function FormatCapacity(cap, usdbtc)
     if (usdbtc)
     {
         var capusd = cap*usdbtc/Math.pow(10,8);
-        var formattedCapusd = capusd.toLocaleString(undefined, {style: 'currency', currency: 'USD'});
-        return `${formattedCap} sat (${formattedCapusd} USD)`;
+        var formattedCapusd = capusd.toLocaleString(undefined, {style: 'currency', currency: 'JPY'});
+        return `${formattedCap} sat (${formattedCapusd} JPY)`;
     }
     else
         return `${formattedCap} sat`;
@@ -32,7 +32,7 @@ function ParseAxiosError(error)
 
 function GetTransactionURL(txid)
 {
-    return 'https://www.smartbit.com.au/tx/' + txid;
+    return 'https://blockbook.electrum-mona.org/tx/' + txid;
 }
 
 export {
